@@ -1,0 +1,237 @@
+body{
+	font: 15px Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4; 
+	box-sizing: border-box;
+}
+
+/*Estilos globales */
+.contenedor{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+
+header nav{
+	float: left;
+	margin-top: 10px;
+}
+
+/*Encabezado*/
+header{
+	background-color: #FFFFFF;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: 5px solid #FF0000;
+}
+
+header a{
+	color: #1C8D41;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #marca{
+	float: left;
+}
+
+header #marca h1{
+	margin: 0;
+	color: red;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header .resaltado, header .actual a{
+	color: #199639;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: #CCC;
+	font-weight: bold;
+}
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #007516;
+	text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
+main{
+	width: 100%;
+	/*max-width: 1200px;*/
+	text-align: center;
+	padding: 20px;
+	padding-top: 80px;
+	position: relative;
+	background-color: #199639;
+	/*background-image: url(../images/nao.jpg);9*/
+	background-size: 1200px;
+	background-position: center;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+}
+
+main h1{
+	position: relative;
+	color: white;
+}
+
+.parrafo{
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+	color: #c6c6c6;
+	font-weight: 100;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+	position: relative;
+}
+
+.redes img{
+	width: 30px;
+	margin-top: 20px;
+}
+
+.testimonial{
+	width: 340px;
+	margin: 30px;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 40px 5px black;
+}
+
+.foto1, .foto2, .foto3, .foto4, .foto5, .foto6{
+	margin: auto;
+	width: 250px;
+	height: 130px;
+	background-size: cover;
+	border-radius: 15px;
+	position: relative;
+	top: -60px;
+	box-shadow: 0px 0px 30px -6px black;
+}
+
+.foto1{
+	background-image: url();
+	background-position: center -10px;
+}
+
+.foto2{
+	background-image: url();
+	background-size: 160px;
+	background-position: center -70px;
+}
+
+.foto3{
+	background-image: url();
+	background-size: 160px;
+	background-position: -20px 0px;
+}
+
+.foto4{
+	background-image: url();
+	background-position: center -10px;
+}
+
+.foto5{
+	background-image: url();
+	background-size: 160px;
+	background-position: center -70px;
+}
+
+.foto6{
+	background-image: url();
+	background-size: 160px;
+	background-position: -20px 0px;
+}
+.testimonial h2{
+	margin-top: -40px
+}
+
+.testimonial h4{
+	margin-top: 10px;
+	color: #333333;
+	font-weight: 400;
+}
+
+.testimonial p{
+	margin-top: 5px;
+	font-weight: 100;
+	color: #7e7e7e;
+}
+
+/*main-col "nosotros"*/
+article#main-col{
+	padding-top: 20px;
+	float: left;
+	width: 65%;
+	text-align: justify;
+}
+
+ul#servicios li{
+	list-style: none;
+	padding: 20px;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+	background-color: #e6e6e6;
+}
+
+/*Lateral "nosotros"*/
+aside#lateral{
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+
+.oscuro{
+	padding: 15px;
+	background-color: #9C0A0A;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: justify;
+}

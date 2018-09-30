@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width"> <!-- Aquí la página es responsive-->
+	<meta name="description" content="Tramites de gobierno">
+	<meta name="keywords" content="startup, hackaton, zacatecas, tramite, tramiteagil, pagos, agil">
+	<meta name="author" content="Néstor Vázquez">
+	<link rel="stylesheet" href="css/main2.css">
+	<title>Pagos</title>
+</head>
+<body>
+	
+	<header>
+		<div class="contenedor">
+			<div id="marca">
+				<h1><span class="resaltado">tramiteagil.mx</span> | Pagos</h1>
+			</div>
+			<nav>
+				<li><a href="index.html">Inicio</a></li>
+				<li class="actual"><a href="pagos.html">Pagos</a></li>
+				<li><a href="tramites.html">Tramites</a></li>
+				<!--<li><a href="servicios.html">Pago de Servicios</a></li>-->
+				<li><a href="contacto.html">Contacto</a></li>
+			</nav>
+		</div>
+	</header>
+
+	<section id="main">
+		<div class="contenedor">
+			<article id="main-col">
+				<ul id="servicios">
+					<li>
+						<h3>Tenencia de carritos</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptatem sed porro architecto beatae, recusandae doloribus tempore distinctio numquam ducimus omnis, quod veritatis possimus corporis eaque atque sequi, fugit earum.</p>
+						<p>Precio: $1500</p>
+
+						<form action="paypal.html">
+							<input type="submit" value="Pagar">
+						</form>
+					</li>
+					<li>
+						<h3>Pago del predial de la casita</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat neque laudantium facilis deserunt similique optio nisi at labore repellendus sit dignissimos fugit ab quod, dolores possimus a nobis aspernatur deleniti dolorem harum quasi natus debitis assumenda. Voluptate delectus asperiores sunt temporibus nihil ex maiores facilis.</p>
+						<p>Precio: $1200</p>
+
+						<form action="paypal.html">
+							<input type="submit" value="Pagar">
+						</form>
+					</li>
+					<li>
+						<h3>Multas del pinshi transito</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam rem maiores voluptatum officiis consectetur voluptatem qui sed distinctio assumenda, dolorem autem soluta voluptatibus, quibusdam culpa quidem sapiente nam minima ut et rerum ab! Deleniti tempore possimus fuga est tempora impedit saepe libero, eum consequuntur.</p>
+						<p> $200</p>
+
+						<form action="paypal.html">
+							<input type="submit" value="Pagar">
+						</form>
+					</li>
+					<li>
+						<h3>Otra pinshi cosa bien vergas</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nam voluptas consectetur sit, laborum, in ipsa ratione cupiditate velit. Laudantium iusto perferendis, tenetur eligendi. Iure iste labore id, itaque quo iusto odio recusandae fugiat velit fuga quidem ipsum eum, consequuntur illo obcaecati quisquam pariatur nihil.</p>
+						<p> $250mxn</p>
+
+						<form action="paypal.html">
+							<input type="submit" value="Pagar">
+						</form>
+					</li>
+				</ul>
+			</article>
+
+			<aside id="lateral">
+				<div class="oscuro">
+					<h3>*********</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nisi eligendi veritatis, sed autem similique quos accusamus, facilis fugiat! Dolore obcaecati quibusdam, deleniti ab sed ut, cumque aspernatur nemo enim voluptas eveniet tenetur commodi! Nesciunt ratione laudantium, veritatis necessitatibus dicta repellat corporis ipsa facere culpa tenetur dolore fuga quisquam voluptates minima officia impedit cum, incidunt non sunt aperiam rem sequi, voluptas reprehenderit ea! Hic vero quaerat quibusdam, in assumenda tempore consequatur eaque ipsam vitae enim fugit totam, ex, recusandae fuga sit facere accusantium tenetur iusto blanditiis laboriosam consequuntur! Dolorem, totam ad pariatur quasi odio atque quae quisquam accusantium similique voluptate.</p>
+				</div>
+
+		<div id="paypal-button-container"></div>
+			<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+				<script>
+					// Render the PayPal button
+					paypal.Button.render({
+					// Set your environment
+					env: 'sandbox', // sandbox | production
+
+					// Specify the style of the button
+					style: {
+					layout: 'vertical',  // horizontal | vertical
+					  size:   'medium',    // medium | large | responsive
+					  shape:  'rect',      // pill | rect
+ 					 color:  'gold'       // gold | blue | silver | white | black
+					},
+
+					// Specify allowed and disallowed funding sources
+					//
+					// Options:
+					// - paypal.FUNDING.CARD
+					// - paypal.FUNDING.CREDIT
+					// - paypal.FUNDING.ELV
+					funding: {
+					  allowed: [
+					    paypal.FUNDING.CARD,
+					    paypal.FUNDING.CREDIT
+					  ],
+					  disallowed: []
+					},
+
+					// PayPal Client IDs - replace with your own
+					// Create a PayPal app: https://developer.paypal.com/developer/applications/create
+					client: {
+					  sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+					  production: '<insert production client id>'
+					},
+
+					payment: function (data, actions) {
+					  return actions.payment.create({
+					    payment: {
+					      transactions: [
+					        {
+					          amount: {
+					            total: '0.01',
+					            currency: 'USD'
+					          }
+					        }
+					      ]
+					    }
+					  });
+					},
+
+					onAuthorize: function (data, actions) {
+					  return actions.payment.execute()
+					    .then(function () {
+					      window.alert('Payment Complete!');
+					    });
+					}
+					}, '#paypal-button-container');
+					</script>
+			</aside>
+
+		</div>
+	</section>
+
+	<footer>
+		<p>tramiteagil.mx, Copyright &copy; 2018</p>
+	</footer>
+
+</body>
+</html>

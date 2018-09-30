@@ -1,0 +1,295 @@
+body{
+	font: 15px Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4; 
+	box-sizing: border-box;
+}
+
+/*Estilos globales */
+.contenedor{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+header nav{
+	float: left;
+	margin-top: 10px;
+}
+
+/*Encabezado*/
+header{
+	background-color: #FFFFFF;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: 5px solid #FF0000;
+}
+
+header a{
+	color: #1C8D41;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #marca{
+	float: left;
+}
+
+header #marca h1{
+	margin: 0;
+	color: red;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header .resaltado, header .actual a{
+	color: #199639;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: #CCC;
+	font-weight: bold;
+}
+
+/*Cabecera de imagen*/
+#cabecera{
+	min-height: 400px;
+	background-image: url('../images/dinero.jpg');
+	background-color: rgb(75,75,75);
+	background-blend-mode: soft-light;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	//background-size: ;
+	text-align: center;
+	color: #fff;
+}
+
+#cabecera h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+#cabecera p{
+	font-size: 20px;
+}
+
+#cabecera form{
+	padding: 20px;
+	width: 200px;
+	display: inline-flex;
+}
+
+#cajas{
+	margin-top: 20px;
+}
+
+
+#cajas .caja{
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#cajas .caja img{
+	width: 90px;
+}
+
+#cajas p{
+	text-align: justify;
+}
+
+
+aside#lateral{
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+.oscuro{
+	padding: 15px;
+	background-color: #35424a;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #007516;
+	text-align: center;
+}
+
+/*CONTACTO*/
+
+input, textarea{
+	width: 100%;
+	height: 35px;
+	border: 1px solid gray;
+	margin-bottom: 5px;
+}
+
+textarea{
+	height: 120px;
+}
+
+input[type="submit"]{
+	background-color: #007516;
+	color: #fff;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
+
+main{
+	width: 100%;
+	/*max-width: 1200px;*/
+	text-align: center;
+	padding: 20px;
+	padding-top: 80px;
+	position: relative;
+	background-color: red;
+	/*background-image: url(../images/);*/
+	background-size: 1200px;
+	background-position: center;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+}
+
+main h1{
+	position: relative;
+	color: white;
+}
+
+.parrafo{
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+	color: #c6c6c6;
+	font-weight: 100;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+	position: relative;
+}
+
+.redes img{
+	width: 30px;
+	margin-top: 20px;
+}
+
+.testimonial{
+	width: 500px;
+	height: 280px;
+	margin: 20px;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 40px 5px black;
+}
+
+.foto-perfil1, .foto-perfil2, .foto-perfil3{
+	margin: auto;
+	width: 450px;
+	height: 130px;
+	background-size: cover;
+	border-radius: 10px;
+	position: relative;
+	top: -60px;
+	box-shadow: 0px 0px 30px -6px black;
+}
+
+.foto-perfil1{
+	background-image: url(../images/);
+	background-position: center -10px;
+}
+
+.foto-perfil1 h1{
+	text-decoration: none;
+	text-align: center;
+	padding: 45px;
+	color: black;
+}
+
+.foto-perfil2 h1{
+	text-decoration: none;
+	text-align: center;
+	padding: 45px;
+	color: black;
+}
+
+.foto-perfil2{
+	background-image: url(../images/);
+	background-size: 160px;
+	background-position: center -70px;
+}
+
+.foto-perfil3{
+	background-image: url(../images/);
+	background-size: 160px;
+	background-position: -20px 0px;
+}
+
+
+.testimonial h2{
+	margin-top: -40px
+}
+
+.testimonial h4{
+	margin-top: 10px;
+	color: #333333;
+	font-weight: 400;
+}
+
+.testimonial p{
+	margin-top: 10px;
+	font-weight: 100;
+	color: #7e7e7e;
+}
+
+a:link{
+	text-decoration: none;
+}
